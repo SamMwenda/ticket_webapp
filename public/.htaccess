@@ -6,8 +6,8 @@
     RewriteEngine On
 
     # Handle Authorization Header
-    RewriteCond %{HTTPS:Authorization} .
-    RewriteRule .* - [E=HTTPS_AUTHORIZATION:%{HTTPS:Authorization}]
+    RewriteCond %{SERVER_PORT} ^443$
+RewriteRule (.*) https://ticket-webapp-e228f2d875e1.herokuapp.com/
 
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
