@@ -1,19 +1,11 @@
 import './bootstrap';
 import '../css/app.css';
 
-import './bootstrap';
-import '../css/app.css';
-
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Ultra';
-
-// Check if the protocol is not HTTPS, then redirect
-if (window.location.protocol !== 'https:') {
-    window.location.href = `https://${window.location.host}${window.location.pathname}`;
-}
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
