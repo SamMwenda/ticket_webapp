@@ -104,17 +104,6 @@ public function showTicket()
         ]);
     }
 
-    //render modal ticket ui
-    public function purchase(Ticket $ticket)
-    {
-        return Inertia::render('TicketPage', [
-            'ticket' => new TicketResource(
-                $ticket
-            ),
-        ]);
-    }
-
-
     //update ticket admin
     public function update(Ticket $ticket, TicketUpdateRequest $request)
     {
