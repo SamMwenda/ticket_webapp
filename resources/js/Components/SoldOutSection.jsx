@@ -34,15 +34,24 @@ const BorderLinearProgress = styled(LinearProgress)({
 const SoldOutSection = () => {
     const { tickets } = usePage().props;
     const {
-        data:ticketData,
+        data: ticketData,
     } = tickets;
-    const availableTicketsList = ticketData.map(({ available_tickets }) => available_tickets);
-    const totalTicketsCreatedList = ticketData.map(({ total_tickets_created }) => total_tickets_created);
 
-    const sumOfAvailableTickets = availableTicketsList.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-    const sumOfTotalTicketsCreatedList = totalTicketsCreatedList.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    var percentage = 0;
 
-    const percentage = sumOfTotalTicketsCreatedList / sumOfAvailableTickets;
+    if (ticketData && ticketData.length > 0) {
+        const availableTicketsList = ticketData.map(({ available_tickets }) => available_tickets);
+        const totalTicketsCreatedList = ticketData.map(({ total_tickets_created }) => total_tickets_created);
+
+        const sumOfAvailableTickets = availableTicketsList.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        const sumOfTotalTicketsCreatedList = totalTicketsCreatedList.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+        const sold = (100 * sumOfAvailableTickets) / sumOfTotalTicketsCreatedList;
+        percentage = 100 - sold;
+    } else {
+        percentage = 0
+    }
+
 
     return (
         <div className="relative sm:flex sm:flex-col sm:space-evenly sm:items-center sm:top-20">
@@ -50,7 +59,7 @@ const SoldOutSection = () => {
             <div className='sm:flex sm:flex-col'>
                 <FontAwesomeIcon icon={["fa", "circle-exclamation"]} beat style={{ color: "#f72624", fontSize: '40px' }} />
                 <h1 style={headerStyle}>
-                    ULTRA IS <span style={{ fontSize: '20px' }}>{ parseInt(percentage) }%</span> SOLD OUT
+                    ULTRA IS <span style={{ fontSize: '20px' }}>{parseInt(percentage)}%</span> SOLD OUT
                 </h1>
             </div>
             <BorderLinearProgress variant="determinate" value={parseInt(percentage)} />
