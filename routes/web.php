@@ -22,6 +22,7 @@ Route::get('/dashboard',[TicketController::class,'dashboard'])->middleware(['aut
 Route::get('/',[TicketController::class,'welcome'])->name('/');
 Route::get('showticket',[TicketController::class,'showTicket'])->name('showticket');
 Route::put('/showticket/{ticket}',[TicketController::class,'updateAfterPurchase'])->name('showticket.update');
+Route::get('/showticket/{ticket}/purchase',[TicketController::class,'purchase'])->name('showticket.purchase');
 
 //Ticket
 Route::middleware('auth')->group(function () {
