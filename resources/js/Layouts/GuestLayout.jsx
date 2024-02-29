@@ -1,11 +1,13 @@
 import logoImage from "@/images/logoBlack.png";
+import HttpsRedirect from 'react-https-redirect';
 
 const imageSytle = {
     width: '60%', height: '80%', alignItems: 'center', marginLeft: '60px'
 }
 export default function Guest({ children }) {
     return (
-        <div className="min-h-screen flex flex-col sm:justify-center items-center  bg-gray-100">
+                    <HttpsRedirect>
+ <div className="min-h-screen flex flex-col sm:justify-center items-center  bg-gray-100">
             <div>
                            <img src={logoImage} alt="logo" style={imageSytle} />
 
@@ -15,5 +17,7 @@ export default function Guest({ children }) {
                 {children}
             </div>
         </div>
+</HttpsRedirect>
+
     );
 }
