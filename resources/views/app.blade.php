@@ -12,12 +12,8 @@
 
         <!-- Scripts -->
         @routes
-
-        <!-- Ensure that @viteReactRefresh and @vite are configured to use HTTPS -->
-        @viteReactRefresh("https://ticket-webapp-e228f2d875e1.herokuapp.com/")
-        @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"], 'https://ticket-webapp-e228f2d875e1.herokuapp.com/')
-
-        <!-- Ensure that @inertiaHead generates HTTPS URLs -->
+        @viteReactRefresh
+        @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
     </head>
     <body class="font-sans antialiased">

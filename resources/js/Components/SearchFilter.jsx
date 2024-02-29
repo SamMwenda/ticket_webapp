@@ -82,7 +82,7 @@ export default () => {
                         <span className="hidden text-gray-700 md:inline">Filter</span>
                         <svg
                             className="w-2 h-2 text-gray-700 fill-current md:ml-2"
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="https://www.w3.org/2000/svg"
                             viewBox="0 0 961.243 599.998"
                         >
                             <path d="M239.998 239.999L0 0h961.243L721.246 240c-131.999 132-240.28 240-240.624 239.999-.345-.001-108.625-108.001-240.624-240z" />
