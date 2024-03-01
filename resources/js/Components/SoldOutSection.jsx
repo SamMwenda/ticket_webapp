@@ -36,6 +36,9 @@ const SoldOutSection = () => {
     const {
         data:ticketData,
     } = tickets;
+
+    var percentage = 0;
+    
     if (ticketData && ticketData.length > 0) {
         const availableTicketsList = ticketData.map(({ available_tickets }) => available_tickets);
         const totalTicketsCreatedList = ticketData.map(({ total_tickets_created }) => total_tickets_created);
