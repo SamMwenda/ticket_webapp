@@ -58,7 +58,7 @@ const SoldOutSection = () => {
             <div className='sm:flex sm:flex-col'>
                 <FontAwesomeIcon icon={["fa", "circle-exclamation"]} beat style={{ color: "#f72624", fontSize: '40px' }} />
                 <h1 style={headerStyle}>
-                    ULTRA IS <span style={{ fontSize: '20px' }}>{ parseInt(percentage) }%</span> SOLD OUT	                    ULTRA IS <span style={{ fontSize: '20px' }}>{parseInt(percentage)}%</span> SOLD OUT
+                    ULTRA IS <span style={{ fontSize: '20px' }}>{ parseInt(percentage) }%</span> SOLD OUT
                 </h1>	                
             </div>
             <BorderLinearProgress variant="determinate" value={parseInt(percentage)} />
