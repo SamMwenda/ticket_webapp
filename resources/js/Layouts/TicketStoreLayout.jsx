@@ -29,6 +29,12 @@ export default function Header({ children }) {
                     >
                         Log in
                     </Link>
+                    <Link
+                        href={route('register')} as="button"
+                        className="ms-8 font-bold"
+                    >
+                        Register
+                    </Link>
                 </div>
 
                 <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>{children}</main>
