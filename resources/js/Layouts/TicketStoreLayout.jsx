@@ -29,7 +29,10 @@ export default function Header({ children }) {
                     >
                         Log in
                     </Link>
+<<<<<<< HEAD
                    
+=======
+>>>>>>> parent of 5588684 (corrections)
                 </div>
 
                 <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>{children}</main>
