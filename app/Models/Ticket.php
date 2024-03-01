@@ -10,7 +10,7 @@ class Ticket extends Eloquent
 
     protected $table = 'ticket';
 
-    protected $fillable = ['name','type', 'tier', 'price','available_tickets','total_tickets_created'];
+    protected $fillable = ['name','type', 'tier', 'price','available_tickets',,'total_tickets_created'];
 
     public function scopeFilter($query, array $filters)
 {

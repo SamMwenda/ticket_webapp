@@ -76,9 +76,9 @@ const Create = ({ auth }) => {
                                     onChange={e => setData('tier', e.target.value)}
                                 >
                                     <option value=""></option>
-                                    <option value="Tier 1">Tier 1</option>
-                                    <option value="Tier 2">Tier 2</option>
-                                    <option value="Tier 3">Tier 3</option>
+                                    <option value="tier1">Tier 1</option>
+                                    <option value="tier2">Tier 2</option>
+                                    <option value="tier3">Tier 3</option>
                                 </SelectInput>
                                 <TextInput
                                     className="w-full pb-8 pr-6 lg:w-1/2"

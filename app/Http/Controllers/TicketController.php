@@ -123,7 +123,7 @@ public function showTicket()
 
     $emailData = new EmailData(
         $request->input('amount'),
-        $request->input('price1'),
+        $request->input('price'),
         $request->input('name'),
         $request->input('type'),
         $request->input('tier')

@@ -47,7 +47,7 @@ const TicketItem = () => {
             name: '',
             type: '',
             tier: '',
-            price1: '',
+            price: '',
             available_tickets: '',
             total_tickets_created: '',
         }
@@ -150,7 +150,7 @@ const TicketItem = () => {
 
                                             const updatedData = {
                                                 ...updateData,
-                                                price1: Number(amount) * Number(price),
+                                                price: Number(amount) * Number(price),
                                                 name: name,
                                                 tier: tier,
                                                 type: type,
