@@ -18,6 +18,13 @@ export default function Header({ children }) {
 
                 <div className="sm:fixed sm:top-0 sm:right-0 p-6 text-end">
                     <Link
+                        href={route('/')} as="button"
+                        className="ms-8 font-semibold"
+                    >
+                        Home
+                    </Link>
+
+                    <Link
                         href={route('showticket')} as="button"
                         className="ms-8 font-semibold"
                     >
@@ -29,10 +36,12 @@ export default function Header({ children }) {
                     >
                         Log in
                     </Link>
-<<<<<<< HEAD
-                   
-=======
->>>>>>> parent of 5588684 (corrections)
+                    <Link
+                        href={route('register')} as="button"
+                        className="ms-8 font-bold"
+                    >
+                        Register
+                    </Link>
                 </div>
 
                 <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>{children}</main>
